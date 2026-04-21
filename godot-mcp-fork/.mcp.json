@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "godot": {
+      "command": "npx",
+      "args": ["-y", "github:BackendOutput/godot-mcp#fix/scene-composition-correctness"],
+      "env": {
+        "DEBUG": "true",
+        "GODOT_PATH": "${GODOT_PATH}"
+      }
+    }
+  }
+}

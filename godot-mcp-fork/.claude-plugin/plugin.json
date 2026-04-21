@@ -1,0 +1,8 @@
+{
+  "name": "godot-mcp-fork",
+  "version": "0.1.1-fork.1",
+  "description": "BackendOutput fork of @coding-solo/godot-mcp with three correctness fixes (load_sprite res:// paths, add_node Variant literal parsing, create_scene root_node_name). Pending upstream PR.",
+  "author": {
+    "name": "BackendOutput"
+  }
+}

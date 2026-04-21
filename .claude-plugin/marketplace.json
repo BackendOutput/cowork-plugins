@@ -10,9 +10,17 @@
     {
       "name": "godot-mcp",
       "source": "./godot-mcp",
-      "description": "Connect Claude to the Godot game engine. Launch the editor, run projects, capture debug output, create scenes, add nodes, and load sprites — all directly from chat. Wraps @coding-solo/godot-mcp.",
+      "description": "Connect Claude to the Godot game engine. Launch the editor, run projects, capture debug output, create scenes, add nodes, and load sprites \u2014 all directly from chat. Wraps @coding-solo/godot-mcp.",
       "author": {
         "name": "Coding-Solo"
+      }
+    },
+    {
+      "name": "godot-mcp-fork",
+      "source": "./godot-mcp-fork",
+      "description": "BackendOutput fork of @coding-solo/godot-mcp with three correctness fixes (load_sprite res:// paths, add_node Variant literal parsing, create_scene root_node_name). Pending upstream PR.",
+      "author": {
+        "name": "BackendOutput"
       }
     }
   ]
