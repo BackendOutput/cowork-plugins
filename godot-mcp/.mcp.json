@@ -4,7 +4,8 @@
       "command": "npx",
       "args": ["-y", "@coding-solo/godot-mcp"],
       "env": {
-        "DEBUG": "true"
+        "DEBUG": "true",
+        "GODOT_PATH": "${GODOT_PATH}"
       }
     }
   }

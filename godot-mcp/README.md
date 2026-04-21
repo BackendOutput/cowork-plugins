@@ -20,13 +20,22 @@ Exposes Godot as a set of tools Claude can call directly:
 
 ### Godot path
 
-The plugin tries to find your Godot executable automatically. If auto-detection fails, set the `GODOT_PATH` environment variable to the full path of your Godot binary before launching Cowork / Claude Code:
+The underlying MCP server tries to find your Godot executable at a few common locations. If auto-detection fails (very likely on Windows, where there's no standard install path), set the `GODOT_PATH` environment variable to the full path of your Godot binary. The plugin's `.mcp.json` forwards `GODOT_PATH` through to the MCP subprocess, so setting it at the user level is enough — you don't need to edit Cowork's connector UI.
 
-- Windows: `C:\path\to\Godot_v4.6.2-stable_win64.exe`
-- macOS: `/Applications/Godot.app/Contents/MacOS/Godot`
-- Linux: `/usr/local/bin/godot`
+**Windows (PowerShell, permanent for your user):**
 
-Setting `GODOT_PATH` is only necessary if the MCP server can't find Godot on its own.
+```powershell
+[Environment]::SetEnvironmentVariable("GODOT_PATH", "C:\Godot\Godot_v4.6.2-stable_win64.exe", "User")
+```
+
+**macOS / Linux (bash/zsh, add to your shell rc):**
+
+```bash
+export GODOT_PATH="/Applications/Godot.app/Contents/MacOS/Godot"   # macOS
+export GODOT_PATH="/usr/local/bin/godot"                           # Linux
+```
+
+Then fully quit and relaunch Cowork / Claude Code so the new env var is picked up at spawn. Verify with: *"What godot-mcp tools do you have? Get the Godot version."*
 
 ## Components
 
