@@ -1,0 +1,19 @@
+{
+  "name": "cowork-plugins",
+  "owner": {
+    "name": "BackendOutput"
+  },
+  "metadata": {
+    "description": "Open plugin marketplace for Cowork and Claude Code, curated by BackendOutput. Wraps high-quality MCP servers and workflows into one-click-installable plugins."
+  },
+  "plugins": [
+    {
+      "name": "godot-mcp",
+      "source": "./godot-mcp",
+      "description": "Connect Claude to the Godot game engine. Launch the editor, run projects, capture debug output, create scenes, add nodes, and load sprites — all directly from chat. Wraps @coding-solo/godot-mcp.",
+      "author": {
+        "name": "Coding-Solo"
+      }
+    }
+  ]
+}
